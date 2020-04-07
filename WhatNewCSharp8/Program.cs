@@ -52,24 +52,31 @@ namespace WhatNewCSharp8
                 "demo",
                 "example"
             };
-            Array.ForEach(words, word => Console.Write($"{word} "));
+            //Array.ForEach(words, word => Console.Write($"{word} "));
             Console.WriteLine();
+
+            Range seq = 0..3; 
+            var sentence = words[seq];
+            Array.ForEach(sentence, word => Console.Write($"{word} "));
+            Console.Clear();
 
             Console.WriteLine("Last three word:");
             var lastThree = words[^3..];
             Array.ForEach(lastThree, word => Console.Write($"{word} "));
             Console.WriteLine();
+            Console.Clear();
 
             Console.WriteLine("Last word:");
 
             var last = words[^1];
             Console.Write($"{last} ");
             Console.WriteLine();
+            Console.Clear();
 
-            Console.WriteLine("Middle words:");
-            var middle = words[2..^1];
+            Console.WriteLine("From middle words till end:");
+            var middle = words[2..^0];
             Array.ForEach(middle, word => Console.Write($"{word} "));
-
+            Console.Clear();
 
 
 
